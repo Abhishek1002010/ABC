@@ -1,0 +1,11 @@
+Immediately Invoked Function Expression IIFE
+browser-sync start --server --directory --files "**/*"
+angular.module -- we are executing things/functions on (from ) angular object (min.js)
+module takes (Name OF APPLICATION, [ dependencies/files ] );
+ng-app : Angular js app. Used to bound our angular js app to the html. THe scope of the given file/function is limited to the tag in which it iws mentioned. Hence generally wirtten in <html> tag
+.controller - Used to really define the View(in html) of our ViewModal
+		(Name of controller/our ViewModal, function that defines functionality of the controller)
+'use strict' is used to ignore careless mistakes like x="hello" (without var) can make it global but we dont need it.
+
+$scope is a reserved thing in angular js that connects ViewModal( controller of js) to View(html). Use {{ }} in html
+ng-model="name" does the working of binding View input to ViewModal ( Html to js)
