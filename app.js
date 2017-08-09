@@ -44,7 +44,7 @@ console.log(menu.l);
       //template:'Short Name: {{m.sn}} <button  ng-click="narrow.rem($index);">Narrow It Down For Me!</button>  <br> Name : {{m.name}} <br> Description : {{m.des}}'
 templateUrl:'abc.html',
 scope:{
-  list:"=myList",
+  list:"=my",
   item:"=item",
 }
   };
