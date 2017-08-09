@@ -45,6 +45,7 @@ console.log(menu.l);
 templateUrl:'abc.html',
 scope:{
   list:"=mylist",
+  item:"=item",
 }
   };
 return ddo;
