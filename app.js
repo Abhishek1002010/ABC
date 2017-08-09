@@ -39,10 +39,14 @@ console.log(menu.l);
 
   }
   function found(){
+
     var ddo={
       //template:'Short Name: {{m.sn}} <button  ng-click="narrow.rem($index);">Narrow It Down For Me!</button>  <br> Name : {{m.name}} <br> Description : {{m.des}}'
 templateUrl:'abc.html',
-          };
+scope:{
+  list:"<mylist",
+}
+  };
 return ddo;
   }
   MenuCategoriesService.$inject = ['$http'];
