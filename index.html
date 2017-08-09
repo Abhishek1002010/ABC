@@ -1,18 +1,40 @@
-<!DOCTYPE HTML>
-<html ng-app="NameCalculator">
-<head>
-  <meta charset="utf-8">
-  <script src="angular.min.js"> </script>
-  <script src="app.js"> </script>
-<title>First script</title>
-</head>
+<!doctype html>
+<html lang="en" ng-app="dir">
+  <head>
+    <meta charset="utf-8">
+   <script src="angular.min.js"></script>
+   <script src="app.js"></script>
+   <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+  </head>
 <body >
-<h1> ASCII Name Calculator <h1>
-<div ng-controller="NameCalculatorController">
-<input type="text" ng-model="name" ng-keyup="AsciiFunction(name);">
-<div>
-  Output:{{totalValue}}
-</div>
+   <div class="container" ng-controller="NarrowItDownController as narrow">
+    <h1>Narrow Down Your Chinese Menu Choice</h1>
+<h2 style="color:red"> Please Press Narrow Down it For Me 2-3 times if it doesn't work</h2>
+
+    <div class="form-group">
+      <input ng-model="txt" type="text" placeholder="search term" class="form-control">
+    </div>
+    <div class="form-group narrow-button">
+      <button  ng-click="narrow.search(txt);" class="btn btn-primary">Narrow It Down For Me!</button>
+    </div>
+
+<div style="float:left">
+  <ol>
+  <div ng-repeat='m in narrow.l'>
+    <li>
+<found></found>
+</li>
+  </div>
+</ol>
+
+  </div>
+<div>    <!-- found-items should be implemented as a component -->
+    <found-items found-items="...." on-remove="...."></found-items>
+  </div>
 </div>
 </body>
 </html>
