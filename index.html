@@ -24,10 +24,13 @@
 
 <div style="float:left">
   <ol>
-  <div ng-repeat='m in narrow.l'>
+  <div ng-if="narrow.l.length" ng-repeat='m in narrow.l'>
     <li>
 <found my="narrow" item="m"></found>
 </li>
+  </div>
+  <div ng-if="!narrow.l.length" >
+<h3>Nothing Found!</h3>
   </div>
 </ol>
 
