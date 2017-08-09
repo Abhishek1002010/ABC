@@ -10,7 +10,8 @@ narrow.$inject=['MenuCategoriesService','$scope'];
 //$scope.x=5;
     menu.l=[];
     menu.search= function(txt){
-
+if(txt==" ")
+return;
         var promise = MenuCategoriesService.getMenuCategories();
 
         promise.then(function (response) {
